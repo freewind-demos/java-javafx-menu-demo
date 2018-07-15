@@ -26,11 +26,7 @@ public class Hello extends Application {
             getChildren().add(new MenuBar() {{
                 getMenus().add(new Menu("Menu") {{
                     getItems().add(new MenuItem("change content") {{
-                        this.setOnAction(new EventHandler<ActionEvent>() {
-                            public void handle(ActionEvent event) {
-                                label.setText("Changed!");
-                            }
-                        });
+                        this.setOnAction(event -> label.setText("Changed!"));
                     }});
                 }});
             }});
